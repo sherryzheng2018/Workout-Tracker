@@ -13,7 +13,7 @@ db.once('open', () => console.log('connected to database!'))
 app.use(express.json())
 
 
-const appRoute = require('./routes/frontendRoutes/app-route')
+const appRoute = require('./routes')
 app.use('/', appRoute)
 
 app.listen(3000, () => console.log('Server Started!'))
