@@ -15,7 +15,7 @@ router.get("/",(req,res)=>{
 })
 
 router.post("/",(req,res)=>{
-    //console.log(req.body);
+    console.log(req.body);
     const workout = new Workout();
     
     Workout.create(workout)
@@ -23,6 +23,7 @@ router.post("/",(req,res)=>{
       res.status(200).json(dbWorkout);
     })
     .catch(err => {
+      console.log(err);
       res.status(500).json(err);
     });
      
