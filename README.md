@@ -13,5 +13,6 @@ This app utilizes Mongo database with a Mongoose schema and handle routes with E
 ### To use this app, please visit: https://sherryfitnesstracker.herokuapp.com/
 
 
-![workout-tracker](assets\fitness-tracker2.png)
-![workout-tracker](assets\fitness-tracker1.png)
+![workout-tracker](./assets/fitness-tracker2.png)
+
+![workout-tracker](./assets/fitness-tracker1.png)
