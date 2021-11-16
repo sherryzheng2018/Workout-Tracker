@@ -5,7 +5,7 @@ const Workout = require("../../model/Workout.js");
 router.get("/",(req,res)=>{
     //console.log(req.body);
     Workout.find().sort({day:1}).then(dbWorkout => {
-        console.log(dbWorkout);
+        // console.log(dbWorkout);
         res.status(200).json(dbWorkout);
     })
     .catch(err => {
@@ -41,6 +41,19 @@ router.put("/:id", (req,res)=>{
     
 })
 
-
+router.get("/range",(req,res)=>{
+    //console.log(req.body);
+    Workout.find()
+    .sort({day:-1})
+    .limit(7)
+    .then(dbWorkout => {
+        // console.log(dbWorkout);
+        res.status(200).json(dbWorkout);
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+     
+})
 
 module.exports = router;
