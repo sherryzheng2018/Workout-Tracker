@@ -22,7 +22,7 @@ const appRoute = require('./routes')
 //add middleware logging
 app.use((req, res, next) => {
     console.log("Middleware called.")
-    console.log(req)
+    console.log(req.path)
     next() // calling next middleware function or handler
   })
 
